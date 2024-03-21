@@ -1,0 +1,16 @@
+echo  "Enter the  employee name
+read name
+echo "Enter the hours worked"
+read hours
+echo "enter rate per hour worked "
+read rate
+basic_pay=$((hours *rates))
+if[$basic_pay -ge 70000]; then
+tax=$((25/100 *basic_pay))
+elif[$basic_pay -lt 70000] &&[$basic_pay -gt 15000]; then
+tax=$((15/100 * basic_pay))
+else
+tax=0
+fi
+net_pay=$((basic_pay-tax))
+echo "$name net pay is $net_pay"
