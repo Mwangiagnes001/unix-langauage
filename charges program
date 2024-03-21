@@ -1,0 +1,16 @@
+echo "Enter the customers-id"
+  read id
+echo "Enter the customers name"
+  read name
+echo  "Enter the unit consumed"
+  read units
+if[$units -le 199]; then
+bill=$((units *200))
+elif[$units -ge 200] && [$units -lt 400] ; then
+bill=$((units *150))
+elif[$units -ge 400] && [$units -lt 600] ; then
+bil=$((units *180))
+else
+bill=$((units *200))
+  fi
+echo "your total bill is $bill"
